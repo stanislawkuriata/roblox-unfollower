@@ -6,5 +6,5 @@ No matter the circumstances, NEVER share your .ROBLOSECURITY cookie with anybody
 
 ## Installation
 1. Open `main.py` and fill the data in the 3rd and 4th line
-2. Open command prompt where the python file is present and run `python .`
+2. Open command prompt where the python file is present and run `python main.py`
 3. Voilà!
