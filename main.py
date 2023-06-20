@@ -23,12 +23,12 @@ while True:
     following = following_response.json()['data']
     
     for user in following:
-        userId = user['id']
-        username_response = requests.get(f'https://friends.roblox.com/v1/metadata?targetUserId={userId}')
+        user_id = user['id']
+        username_response = requests.get(f'https://friends.roblox.com/v1/metadata?targetUserId={user_id}')
         username = username_response.json()['userName']
         
         print(f'Unfollowed: {username}')
-        unfollow_user(userId)
+        unfollow_user(user_id)
     
     nextpagecursor = following_response.json()['nextPageCursor']
     following_response = requests.get(f'https://friends.roblox.com/v1/users/{robloxId}/followings?limit=100&sortOrder=Asc&cursor={nextpagecursor}', headers=session.headers, cookies=session.cookies)
